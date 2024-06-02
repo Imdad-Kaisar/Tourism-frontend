@@ -1,18 +1,23 @@
+import React, { useState } from 'react';
+import Background from './components/Background.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header.jsx';
+import GettingStartedButton from './components/intro/Intro.jsx';
 
 
-
-function App() {
+const App =() => {
   
-
   return (
-    <>
-    <div  class="h-screen flex items-center justify-center">
-    <h1 className="text-3xl font-bold text-blue-500 underline">
-      Welcome to Miracle Tourism
-    </h1>
+    <div>
+      <Background />
+      <Header />
+      <GettingStartedButton />
+      
+      
     </div>
-    </>
-  )
+  )  
 }
 
-export default App
+
+export default App;
+
