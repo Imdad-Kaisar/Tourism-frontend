@@ -1,3 +1,49 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0d5d634ccd61dcf82d967e6e5ecc18e31f210425df86f84df98af87e3fc86dc4
-size 899
+.quote-display{
+    position: absolute; /* Fix the container to the viewport */
+    top: 33%;
+    left:25%;
+    right:25%;
+    display: flex;
+    justify-content: center;
+    
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.quote-display p{
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    color:rgb(255, 255, 255);
+    width: 100%;
+    font-weight: bold;
+    outline: none;
+    animation: fade-inout 4s infinite alternate;
+
+    
+}
+.quote-display span{
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    color:rgb(255, 255, 254);
+    width: 100%;
+    font-weight: bold;
+    outline: none;
+    animation: fade-inout 4s infinite alternate;
+}
+@keyframes fade-inout{
+    0%{
+        opacity:0;
+        transform: translateY(-30px) scale(0.9);
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+
+
+
+
+  
+  

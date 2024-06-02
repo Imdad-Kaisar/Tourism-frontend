@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:83008a569f2236610026d4fe7395be2f6b19d7d41d7d9782561d83a163b03003
-size 277
+.background{
+    height: 100%;
+    width: 100%;
+    float: left;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom:0;
+    padding: none;
+    position: fixed;
+    object-fit:  cover;
+    z-index: -1;    
+    position:relative;
+    margin: 0;
+    min-height: 100%;
+}

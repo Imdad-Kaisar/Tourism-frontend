@@ -1,3 +1,93 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:127d531596c1ff954b9e82e57054d1085f0df8977d0c4a32c6b048b19fc0d096
-size 1800
+.header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    
+}
+.header_container {
+     display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 1150px;
+    margin-top: 16px;
+    margin-bottom: 50px;
+   
+    
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #243a49;
+    font-size: 32px;
+    line-height: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.header_svg{
+    margin:16px;
+}
+
+.menu__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 233px;
+    list-style-type: none;
+
+}
+
+.menu__link {
+    color: #f0f0f0;
+    line-height: 16px;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 2rem; /* Remove or adjust as needed */
+    padding: 0.5rem 1rem; /* Add padding */
+    
+}
+.menu__item:hover{
+    transform: scale(1.1);
+    letter-spacing: 0.25em;
+    
+    
+}
+
+.button {
+    background: #243a49;
+    color: white;
+    border-radius: 50px;
+    border-width: 0;
+    width: 150px;
+    height: 50px;
+    /*font-family: Larsseit, serif;*/
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.35s;
+    margin-top: 20px;
+    margin-left: 200px;
+    z-index: 10;
+}
+
+.button:hover {
+    
+    color: rgb(12, 95, 116);
+     /* Adjust hover color as needed */
+    transform: scale(1.1);
+    letter-spacing: 0.25em;
+    background: linear-gradient(to right, #d5d5d5, #9abdd8);
+    box-shadow: 0 0 35px #62D0DF;
+}
+.header__logo:hover{
+    transform: scale(1.1);
+    letter-spacing: 0.25em;
+}
+

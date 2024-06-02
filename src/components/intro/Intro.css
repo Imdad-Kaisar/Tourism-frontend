@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a599bcd464fd25516f13af0846eff80b8d44d480a72daf34a8c97b956fa36590
-size 1180
+.getting-started-button-container {
+    position: absolute; /* Fix the container to the viewport */
+    top: 75%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset to center content */
+    display: flex;
+    justify-content: center; /* Center button horizontally */
+    align-items: center; /* Center button vertically */
+     
+  }
+  
+  .getting-started-button {
+    background: linear-gradient(to right, #39acf8, #122534); /* Gradient background */
+    color: white;
+    
+    padding: 10px 30px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 50px; /* Adjust border radius as needed */
+    cursor: pointer;
+    font-size: 16px; /* Adjust font size as needed */
+    box-shadow: 0px 5px 100px rgba(17, 142, 113, 0.916);
+    border: 2px solid #62D0DF; 
+    font-size: 1.25em;
+    transition: 0.5s;
+  }
+  
+  .getting-started-button:hover {
+    background-color: #33495b; /* Adjust hover color as needed */
+    transform: scale(1.1);
+    letter-spacing: 0.25em;
+    background: linear-gradient(to right, #19567e, #122534);
+    box-shadow: 0 0 35px #62D0DF;
+  }
+  
+  

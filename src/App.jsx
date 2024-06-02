@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:300c2f8d87f5ecf68ed88299fda8ec73febb09e6d2f3daad25426e6b9ffde2d7
-size 691
+import React, { useState } from 'react';
+import Background from './components/Background.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header.jsx';
+import GettingStartedButton from './components/intro/Intro.jsx';
+import Footer from './components/footer/Footer.jsx';
+import './App.css'
+import QuoteDisplay from './components/Quotes/Quotes.jsx';
+
+const App =() => {
+  
+  return (
+    <div className='app'>
+      
+      
+      
+      
+      
+       <Header />
+      <QuoteDisplay />
+      <GettingStartedButton />
+      
+      <Background />
+      <Footer />
+      
+    
+      
+      
+    </div>
+  )  
+}
+
+
+export default App;
+
