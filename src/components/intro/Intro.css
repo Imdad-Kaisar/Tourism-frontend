@@ -1,11 +1,12 @@
 .getting-started-button-container {
-    position: fixed; /* Fix the container to the viewport */
+    position: absolute; /* Fix the container to the viewport */
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Offset to center content */
     display: flex;
     justify-content: center; /* Center button horizontally */
     align-items: center; /* Center button vertically */
+     
   }
   
   .getting-started-button {
