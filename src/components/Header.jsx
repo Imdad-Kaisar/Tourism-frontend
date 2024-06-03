@@ -1,7 +1,8 @@
 
 import React from "react";
-import './Header.css'
+import './Header.css';
 import { IoLogoVimeo } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 function Header() {
     return(
@@ -27,7 +28,9 @@ function Header() {
                     </li>
                 </ul>
             </nav>
+            <Link to="/login" >
             <button className="button" type="button">Sign In</button>
+            </Link>
         </div>
         </header>
     )

@@ -1,32 +1,24 @@
 import React, { useState } from 'react';
-import Background from './components/Background.jsx';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header.jsx';
-import GettingStartedButton from './components/intro/Intro.jsx';
-import Footer from './components/footer/Footer.jsx';
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import './App.css'
-import QuoteDisplay from './components/Quotes/Quotes.jsx';
+import { BrowserRouter, Routes } from 'react-router-dom';
+
+import ReactDOM from 'react-dom/client'
+import Layout from './Layout.jsx';
+import Login from './components/Login/Login.jsx';
+
 
 const App =() => {
   
   return (
-    <div className='app'>
-      
-      
-      
-      
-      
-       <Header />
-      <QuoteDisplay />
-      <GettingStartedButton />
-      
-      <Background />
-      <Footer />
-      
-    
-      
-      
-    </div>
+    <>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Layout />} />
+        <Route path='/login' element={<Login />} />  {/* Add login route */}
+      </Routes>
+    </BrowserRouter>
+    </>
   )  
 }
 
