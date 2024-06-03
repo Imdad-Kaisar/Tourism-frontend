@@ -8,22 +8,27 @@ import Layout from './Layout.jsx';
 import Login from './components/Login/Login.jsx';
 import Register from './components/register/Register.jsx';
 import {Toaster} from 'react-hot-toast'
-
+import { UserContextProvider } from '../context/userCntact.jsx';
+import Dashboard from './components/dashboard/Dashboard.jsx';
+ 
 axios.defaults.baseURL= 'http://localhost:8000';
 axios.defaults.withCredentials=true
 const App =() => {
   
   return (
-    <>
+    
+    <UserContextProvider>
     <BrowserRouter>
     <Toaster position='bottom-right' toastOptions={{duration:2000}} />
       <Routes>
         <Route path='/' element={<Layout />} />
         <Route path='/register' element={<Register />} />  
         <Route path='/login' element={<Login />} />
+        <Route path='dashboard' element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
-    </>
+    </UserContextProvider>
+    
   )  
 }
 
