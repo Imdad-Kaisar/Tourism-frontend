@@ -28,9 +28,14 @@ function Header() {
                     </li>
                 </ul>
             </nav>
+            <div className="button_container">
             <Link to="/register" >
             <button className="button" type="button">Sign In</button>
             </Link>
+            <Link to="/login"> {/* Add Link with appropriate path */}
+            <button className="button">Log In</button>  {/* No type attribute needed */}
+            </Link>
+            </div>
             
         </div>
         </header>
