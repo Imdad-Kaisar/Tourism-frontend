@@ -1,41 +1,31 @@
-import React, { useState } from 'react'; // Import useState for handling form input
+import React from 'react'
+import { useState } from 'react'
+import axios from'axios'
 
 export default function Login() {
-  const [username, setUsername] = useState(''); // State variable for username
-  const [password, setPassword] = useState(''); // State variable for password
+    const [data,setData]=useState({
+        email:'',
+        password:'',
+    })
 
-  const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent default form submission behavior
+    const loginUser = (e) => {
+        e.preventDefault()
+        axios.get('/')
 
-    // Implement logic to handle login (e.g., send login request to server)
-    console.log('Username:', username);
-    console.log('Password:', password);
-
-    // Clear form fields after submission (optional)
-    setUsername('');
-    setPassword('');
-  };
-
+    }
   return (
-    <div className="login-container">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Username:</label>
-        <input
-          type="text"
-          id="username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Sign In</button>
+    
+    <div>
+      <form onSubmit={loginUser}>
+            
+            <label> Email</label>
+            <input type='email' placeholder=' enter email'  value={data.email} onChange={(e) => setData({...data, email: e.target.value})} />
+            <label> Password</label>
+            <input type='password' placeholder=' enter password' value={data.password} onChange={(e) => setData({...data, password: e.target.value})}/>
+            <button type='submit'>Login</button>
       </form>
     </div>
-  );
+  )
 }
+
+

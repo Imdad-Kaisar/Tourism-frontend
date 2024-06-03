@@ -28,9 +28,10 @@ function Header() {
                     </li>
                 </ul>
             </nav>
-            <Link to="/login" >
+            <Link to="/register" >
             <button className="button" type="button">Sign In</button>
             </Link>
+            
         </div>
         </header>
     )
