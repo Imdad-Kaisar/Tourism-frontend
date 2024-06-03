@@ -3,6 +3,7 @@ import { useState } from 'react'
 import axios from'axios'
 import {toast} from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
+import './Login.css'
 
 export default function Login() {
   const navigate= useNavigate()
@@ -32,17 +33,24 @@ export default function Login() {
     }
   return (
     
-    <div>
-      <form onSubmit={loginUser}>
+    <div className='body'>
+      <div className="main">
+        <div className="register">
+          <h2>Login</h2>
+      <form id='register' onSubmit={loginUser}>
             
             <label> Email</label>
-            <input type='email' placeholder=' enter email'  value={data.email} onChange={(e) => setData({...data, email: e.target.value})} />
+            <br />
+            <input id='name' type='email' placeholder=' enter email'  value={data.email} onChange={(e) => setData({...data, email: e.target.value})} />
+            <br /> <br />
             <label> Password</label>
-            <input type='password' placeholder=' enter password' value={data.password} onChange={(e) => setData({...data, password: e.target.value})}/>
-            <button type='submit'>Login</button>
+            <br />
+            <input id='name' type='password' placeholder=' enter password' value={data.password} onChange={(e) => setData({...data, password: e.target.value})}/>
+            <br /> <br />
+            <button id='submit' type='submit'>Login</button>
       </form>
+    </div>
+    </div>
     </div>
   )
 }
-
-

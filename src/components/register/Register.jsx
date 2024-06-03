@@ -3,6 +3,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import {toast} from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom';
+import './Register.css'
 
 export default function Register() {
     const navigate=useNavigate()
@@ -31,19 +32,29 @@ export default function Register() {
         }
     }
   return (
-    <div>
-        
-        <form onSubmit= { registerUser}>
+    <div className="body">
+    <div className='main'>
+        <div className="register">
+            <h2>Register</h2>
+        <form id='register' onSubmit= { registerUser}>
             <label> Name</label>
-            <input type='text' placeholder=' enter name' value={data.name} onChange={(e) => setData({...data, name: e.target.value})} />
+            <br />
+            <input id='name' type='text' placeholder=' enter name' value={data.name} onChange={(e) => setData({...data, name: e.target.value})} />
+            <br /> <br />
+
             <label> Email</label>
-            <input type='email' placeholder=' enter email' value={data.email} onChange={(e) => setData({...data, email: e.target.value})}/>
+            <br />
+            <input id='name' type='email' placeholder=' enter email' value={data.email} onChange={(e) => setData({...data, email: e.target.value})}/>
+            <br /> <br />
             <label> Password</label>
-            <input type='password' placeholder=' enter password' value={data.password} onChange={(e) => setData({...data, password: e.target.value})}/>
-            <button type='submit'>Submit</button>
+            <br />
+            <input id='name' type='password' placeholder=' enter password' value={data.password} onChange={(e) => setData({...data, password: e.target.value})}/>
+            <br /> <br />
+            <button id='submit' type='submit'>Submit</button>
         </form>
+        </div>
+    </div>
     </div>
   )
 }
-
 
