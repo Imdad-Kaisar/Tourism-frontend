@@ -21,7 +21,8 @@ function Header() {
                         <a href="" className="menu__link">About</a>
                     </li>
                     <li className="menu__item">
-                        <a href="" className="menu__link">Services</a>
+                        <a href="" className="menu__link">
+                            <Link to="/services">Services </Link></a>
                     </li>
                     <li className="menu__item">
                         <a href="" className="menu__link">Package</a>
